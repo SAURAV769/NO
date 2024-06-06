@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+  font-family: "poppins" ,sans-serif;
+}
+
+body {
+    background-color: #FFBB00;
+}
+body p{
+	font-size:10px;
+	letter-spacing: 2px;
+	color:#492F2F ;
+}
+.card{
+	height: 320px;
+	width: 320px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	-webkit-perspective: 600px;
+	perspective: 600px;
+	transition: 1s;
+}
+.card:hover{
+	transform: rotate(-5deg);
+}
+.card:hover .outside{
+	transform: rotateY(-130deg);
+}
+.outside,
+.inside{
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	left: 50.1%;
+}
+.inside{
+	background: linear-gradient( to right, #e0e0e0 , #FFFFFF 30%);
+	line-height: 20px;
+	padding: 0 20px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	left: 50%;
+}
+.outside{
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	z-index: 1;
+	transform-origin: left;
+	transition: 2s;
+}
+.front,
+.back{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: rotateX(0deg);
+	background-color: white;
+}
+.front{
+	background-color: #FFFFFF;
+}
+.back{
+	transform: rotateY(180deg);
+	background: linear-gradient(to left, #e0e0e0, #FFFFFF 30%);
+}
+.cake{
+	width: 100%;
+	position: absolute;
+	bottom: 15px;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer{
+	height:40px;
+	width: 120px;
+	background-repeat: repeat;
+	background-size: 60px 100px;
+	background-position: 28px 0;
+	background-image: linear-gradient(transparent 50px,
+	#fedbab 50px,
+	#fedbab 60px,
+	transparent 60px
+	),
+	radial-gradient(circle at 30px 5px,#994c10 30px,#fcbf29 31px);
+	border-radius: 10px 10px 0 0;
+	position: relative;
+	margin: auto;
+}
+.middle-layer{
+	transform: scale(0.85);
+	top: 3px;
+}
+.top-layer{
+	transform: scale(0.7);
+	top: 13px;
+}
+.candle{
+	height: 22.5px;
+	width: 7.5px;
+	background: repeating-linear-gradient(45deg , #fd3018 0, #fd3018 5px,
+	#ffa89a 5px, #ffa89a 10px);
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	bottom: 101px;
+}
+.candle:before{
+	content: "";
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	background-color: #ffa500;
+	border-radius: 0 50% 50% 50%;
+	bottom: 23px;
+	transform: rotate(45deg);
+	left: -0.5px;
+}
+.outside p{
+	font-size: 12px;
+	margin-top: 60px;
+	text-align: center;
+	letter-spacing: 6px;
+	color: #000046;
+}
+.inside h1{
+	font-size:120px;
+	line-height: 120px;
+}
+.inside p{
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #007232;
+}
